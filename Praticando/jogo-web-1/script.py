@@ -16,6 +16,11 @@ def todosVivos():
             return False
     return True
 
+def morreu():
+    for player in listaP:
+        if player['vida'] <= 0:
+            print(f'O jogador {player['nome']} morreu!')
+
 
 
 player1 = {
