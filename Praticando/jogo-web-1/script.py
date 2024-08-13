@@ -5,9 +5,13 @@
 # danoCrit = a cada 1 ponto, +10% de dano,
 # chanceCrit = a cada 1 ponto, 1% do critico dar certo
 
-def atacar(player, dano=0):
-    listaP[player]['vida'] -= dano
-    print(f'O jogador {listaP[player]['nome']} tomou {dano} de dano!')
+def atacar(player):
+    danoR = (listaP[player]['dano'] - listaP[player]['defesa'])
+    listaP[player]['vida'] -= danoR
+    if player == 0:
+        print(f'O jogador \033[34m{listaP[player]['nome']}\033[m tomou \033[1;31m{danoR}\033[m de dano!\n')
+    else:
+        print(f'O jogador \033[33m{listaP[player]['nome']}\033[m tomou \033[1;31m{danoR}\033[m de dano!\n')
 
 def todosVivos():
     for player in listaP:
@@ -27,7 +31,7 @@ player1 = {
     'nome': 'Eduardo',
     'dano': 2,
     'vida': 10,
-    'defesa': 0,
+    'defesa': 0.75,
     'veloAta': 1,
     'danoCrit': 1,
     'chanceCrit': 1,
@@ -38,7 +42,7 @@ player2 = {
     'nome': 'Gustavo',
     'dano': 2,
     'vida': 10,
-    'defesa': 0,
+    'defesa': 0.5,
     'veloAta': 1,
     'danoCrit': 1,
     'chanceCrit': 1,

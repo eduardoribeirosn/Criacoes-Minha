@@ -6,5 +6,6 @@ while continuar:
     morreu()
     if continuar == False:
         break
-    atacar(1, 2)
+    atacar(1)
+    atacar(0)
     
