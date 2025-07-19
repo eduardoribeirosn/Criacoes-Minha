@@ -1,5 +1,7 @@
 let sumPont = 1
+let nivelAutoC = 0
 let upgradePont = 0
+let upgradeAutoC = 0
 
 
 // Botão para adicionar Pontos | Alterar texto de ganhar pontos
@@ -8,6 +10,10 @@ attButtonPontos()
 
 // Valor para fazer upgrade de ganhar Pontos | Alterar texto de upgrade de ganhar Pontos
 attUpgradePonts()
+// -----
+
+// Valor para fazer upgrade no Auto Click | Alterar texto de upgrade do Auto Click
+attUpgradeAutoC()
 // -----
 
 
@@ -30,6 +36,11 @@ function getValueUpPonts() {
     return (10 + (5 * upgradePont))
 }
 
+// Pegar valor para fazer upgrade de Auto Click
+function getValueUpAutoClick() {
+    return (50 + (50 * upgradeAutoC))
+}
+
 // Adicionar Pontos a cada clique
 function clickButtonPonts() {
     // Campo dos Pontos
@@ -43,10 +54,20 @@ function clickButtonPonts() {
     return pontos
 }
 
+// Auto Click
+function autoClick() {
+    if (nivelAutoC == 1) {
+        setInterval(() => {
+            clickButtonPonts()
+            console.log(5000 - ((200 * nivelAutoC) - 200))
+        }, (5000 - ((200 * nivelAutoC) - 200)));
+    }
+}
+
 // Fazer upgrade de ganhar Pontos
 function upgradePonts() {
     if (getIntPonts() >= getValueUpPonts()) {
-        getPonts().textContent = getIntPonts() - getValueUpPonts
+        getPonts().textContent = getIntPonts() - getValueUpPonts()
         sumPont += 1
         upgradePont += 1
         attUpgradePonts()
@@ -54,9 +75,15 @@ function upgradePonts() {
     }
 }
 
-// Atualizar o preço para Upgrade de ganhar Pontos
-function attUpgradePonts() {
-    document.getElementById("valorUpPontos").textContent = getValueUpPonts()
+// Fazer upgrade de Auto Click
+function upgradeAutoClick() {
+    if (getIntPonts() >= getValueUpAutoClick()) {
+        getPonts().textContent = getIntPonts() - getValueUpAutoClick()
+        nivelAutoC += 1
+        upgradeAutoC += 1
+        autoClick()
+        attUpgradeAutoC()
+    }
 }
 
 // Atualizar o Botão para adicionar Pontos
@@ -67,4 +94,14 @@ function attButtonPontos() {
     } else {
         buttonPontos.textContent = `Ganhe ${sumPont} Pontos`
     }
+}
+
+// Atualizar o preço para Upgrade de ganhar Pontos
+function attUpgradePonts() {
+    document.getElementById("valorUpPontos").textContent = getValueUpPonts()
+}
+
+// Atualizar o preço para Upgrade de Auto Click
+function attUpgradeAutoC() {
+    document.getElementById("valorUpAutoC").textContent = getValueUpAutoClick()
 }
