@@ -82,14 +82,6 @@ main .tela1 .upgrade-container .upgrade-item button:hover {
     transform: scale(1.05);
 }
 
-main .tela1 table {
-    border: 1px solid #000;
-}
-
-main .tela1 table td, main .tela1 table th {
-    padding: .5rem;
-}
-
 main .tela2 {
     background-color: #268383;
     flex: 1;
