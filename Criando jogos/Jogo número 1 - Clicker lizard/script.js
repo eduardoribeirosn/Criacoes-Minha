@@ -16,6 +16,13 @@ attUpgradePonts()
 attUpgradeAutoC()
 // -----
 
+// Auto Click
+setInterval(() => {
+    if (nivelAutoC > 0) {
+        clickButtonPonts()
+        console.log(5000 - ((200 * nivelAutoC) - 200))
+    }
+}, (5000 - ((200 * nivelAutoC) - 200)));
 
 
 
@@ -54,16 +61,6 @@ function clickButtonPonts() {
     return pontos
 }
 
-// Auto Click
-function autoClick() {
-    if (nivelAutoC == 1) {
-        setInterval(() => {
-            clickButtonPonts()
-            console.log(5000 - ((200 * nivelAutoC) - 200))
-        }, (5000 - ((200 * nivelAutoC) - 200)));
-    }
-}
-
 // Fazer upgrade de ganhar Pontos
 function upgradePonts() {
     if (getIntPonts() >= getValueUpPonts()) {
@@ -81,7 +78,6 @@ function upgradeAutoClick() {
         getPonts().textContent = getIntPonts() - getValueUpAutoClick()
         nivelAutoC += 1
         upgradeAutoC += 1
-        autoClick()
         attUpgradeAutoC()
     }
 }
