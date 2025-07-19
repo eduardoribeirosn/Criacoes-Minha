@@ -46,7 +46,7 @@ function clickButtonPonts() {
 // Fazer upgrade de ganhar Pontos
 function upgradePonts() {
     if (getIntPonts() >= getValueUpPonts()) {
-        getPonts().textContent = getIntPonts() - getValueUpPonts()
+        getPonts().textContent = getIntPonts() - getValueUpPonts
         sumPont += 1
         upgradePont += 1
         attUpgradePonts()
