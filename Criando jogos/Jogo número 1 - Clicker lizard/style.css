@@ -32,6 +32,14 @@ main .tela1 {
     flex: 1;
 }
 
+main .tela1 table {
+    border: 1px solid #000;
+}
+
+main .tela1 table td, main .tela1 table th {
+    padding: .5rem;
+}
+
 main .tela2 {
     background-color: #268383;
     flex: 1;
