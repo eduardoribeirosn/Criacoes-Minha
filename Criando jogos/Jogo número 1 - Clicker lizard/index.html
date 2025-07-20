@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker Lizard</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -19,21 +19,21 @@
                     <div class="upgrade-item">
                         <span class="descricao" id="spanUpPontos">Aumente seu ganho de Pontos</span>
                         <span class="valor" id="valorUpPontos">10</span>
-                        <button id="buttonUpPontos" onclick="upgradePonts()">+1</button>
+                        <button id="buttonUpPontos">+1</button>
                         <span class="level" id="levelUpPontos">0</span>
                     </div>
 
                     <div class="upgrade-item">
                         <span class="descricao" id="spanUpAutoC">Auto Click</span>
                         <span class="valor" id="valorUpAutoC">10</span>
-                        <button id="buttonUpAutoC" onclick="upgradeAutoClick()">+1</button>
+                        <button id="buttonUpAutoC">+1</button>
                         <span class="level" id="levelUpAutoC">0</span>
                     </div>
                 </div>
         </div>
         <div class="tela2">
             <span id="spanPontos">0</span>
-            <button id="buttonPontos" onclick="clickButtonPonts()">Clique Aqui!</button>
+            <button id="buttonPontos">Clique Aqui!</button>
         </div>
         <div class="tela3">
 
