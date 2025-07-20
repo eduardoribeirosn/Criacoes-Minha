@@ -58,7 +58,7 @@ main .tela1 .upgrade-container .upgrade-item span.descricao {
     font-weight: bold;
 }
 
-main .tela1 .upgrade-container .upgrade-item spawn.valor {
+main .tela1 .upgrade-container .upgrade-item span.valor {
     flex: 1;
     text-align: center;
     background-color: #b6e2e2;
@@ -68,7 +68,7 @@ main .tela1 .upgrade-container .upgrade-item spawn.valor {
 
 main .tela1 .upgrade-container .upgrade-item button {
     flex: 1;
-    margin-left: 1rem;
+    margin: 0 1rem;
     padding: .4rem .8rem;
     background-color: #00c3ff;
     border: none;
@@ -80,6 +80,15 @@ main .tela1 .upgrade-container .upgrade-item button {
 
 main .tela1 .upgrade-container .upgrade-item button:hover {
     transform: scale(1.05);
+    background-color: #03a5d6;
+}
+
+main .tela1 .upgrade-container .upgrade-item .level {
+    flex: 1;
+    text-align: center;
+    background-color: #b6e2c5;
+    padding: .3rem .1rem;
+    border-radius: .4rem;
 }
 
 main .tela2 {

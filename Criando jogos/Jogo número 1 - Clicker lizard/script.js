@@ -3,6 +3,8 @@ let nivelAutoC = 0
 let upgradePont = 0
 let upgradeAutoC = 0
 
+let idFuncAutoC
+
 
 // Botão para adicionar Pontos | Alterar texto de ganhar pontos
 attButtonPontos()
@@ -16,13 +18,7 @@ attUpgradePonts()
 attUpgradeAutoC()
 // -----
 
-// Auto Click
-setInterval(() => {
-    if (nivelAutoC > 0) {
-        clickButtonPonts()
-        console.log(5000 - ((200 * nivelAutoC) - 200))
-    }
-}, (5000 - ((200 * nivelAutoC) - 200)));
+
 
 
 
@@ -61,6 +57,29 @@ function clickButtonPonts() {
     return pontos
 }
 
+// Auto Click
+function autoClick() {
+    if (idFuncAutoC) {
+        setTimeout(() => {
+            clearInterval(idFuncAutoC)
+            idFuncAutoC = setInterval(() => {
+                if (nivelAutoC > 0) {
+                    clickButtonPonts()
+                    console.log(5000 - ((200 * nivelAutoC) - 200))
+                }
+            }, (5000 - ((200 * nivelAutoC) - 200)));
+        }, 0);
+    } else {
+        idFuncAutoC = setInterval(() => {
+            if (nivelAutoC > 0) {
+                clickButtonPonts()
+                console.log(5000 - ((200 * nivelAutoC) - 200))
+            }
+        }, (5000 - ((200 * nivelAutoC) - 200)));
+    }
+}
+
+
 // Fazer upgrade de ganhar Pontos
 function upgradePonts() {
     if (getIntPonts() >= getValueUpPonts()) {
@@ -75,10 +94,12 @@ function upgradePonts() {
 // Fazer upgrade de Auto Click
 function upgradeAutoClick() {
     if (getIntPonts() >= getValueUpAutoClick()) {
-        getPonts().textContent = getIntPonts() - getValueUpAutoClick()
-        nivelAutoC += 1
-        upgradeAutoC += 1
-        attUpgradeAutoC()
+        if (upgradeAutoC < 25) {
+            getPonts().textContent = getIntPonts() - getValueUpAutoClick()
+            nivelAutoC += 1
+            upgradeAutoC += 1
+            attUpgradeAutoC()
+        }
     }
 }
 
@@ -95,9 +116,12 @@ function attButtonPontos() {
 // Atualizar o preço para Upgrade de ganhar Pontos
 function attUpgradePonts() {
     document.getElementById("valorUpPontos").textContent = getValueUpPonts()
+    document.getElementById("levelUpPontos").textContent = upgradePont
 }
 
 // Atualizar o preço para Upgrade de Auto Click
 function attUpgradeAutoC() {
     document.getElementById("valorUpAutoC").textContent = getValueUpAutoClick()
+    document.getElementById("levelUpAutoC").textContent = upgradeAutoC
+    autoClick()
 }
