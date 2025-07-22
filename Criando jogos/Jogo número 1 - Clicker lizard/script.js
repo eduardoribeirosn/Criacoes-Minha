@@ -3,7 +3,7 @@ let sumPont = 1
 let nivelAutoC = 0
 let upgradeAutoC = 0
 
-let upgradePont = 0
+let upgradePont = 1
 
 let level = 1
 

@@ -21,5 +21,5 @@ export function attUpgradePonts() {
 
 // Pegar valor para fazer upgrade de ganhar Pontos
 export function getValueUpPonts() {
-    return (10 + (10 * getUpgradePont()))
+    return (10 * getUpgradePont())
 }
