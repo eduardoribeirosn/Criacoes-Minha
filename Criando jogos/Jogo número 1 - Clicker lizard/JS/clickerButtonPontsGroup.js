@@ -5,7 +5,7 @@ export function clickButtonPonts() {
     // Campo dos Pontos
     let spanPontos = document.getElementById("spanPontos")
     // Pontos
-    let pontos = parseInt(spanPontos.textContent)
+    let pontos = parseFloat(spanPontos.textContent)
     pontos += getSumPont()
 
     spanPontos.textContent = pontos
@@ -28,8 +28,8 @@ export function getPonts() {
     return document.getElementById("spanPontos");
 }
 
-// Pegar valor inteiro de Pontos atuais
+// Pegar valor inteiro de Pontos atuais (depois alterado para Float)
 export function getIntPonts() {
     let valuePonts = document.getElementById("spanPontos").textContent
-    return parseInt(valuePonts);
+    return parseFloat(valuePonts);
 }

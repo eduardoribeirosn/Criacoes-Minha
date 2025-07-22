@@ -38,11 +38,11 @@ export function autoClick() {
 // Atualizar o preço para Upgrade de Auto Click
 export function attUpgradeAutoC() {
     document.getElementById("valorUpAutoC").textContent = getValueUpAutoClick()
-    document.getElementById("levelUpAutoC").textContent = getUpgradeAutoC()
+    document.getElementById("nivelUpAutoC").textContent = getUpgradeAutoC()
     autoClick()
 }
 
 // Pegar valor para fazer upgrade de Auto Click
 export function getValueUpAutoClick() {
-    return (50 + (50 * getUpgradeAutoC()))
+    return (500 + (500 * getUpgradeAutoC()))
 }

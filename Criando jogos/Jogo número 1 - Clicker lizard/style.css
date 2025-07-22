@@ -83,7 +83,7 @@ main .tela1 .upgrade-container .upgrade-item button:hover {
     background-color: #03a5d6;
 }
 
-main .tela1 .upgrade-container .upgrade-item .level {
+main .tela1 .upgrade-container .upgrade-item .nivel {
     flex: 1;
     text-align: center;
     background-color: #b6e2c5;
