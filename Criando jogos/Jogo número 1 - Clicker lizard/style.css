@@ -122,6 +122,47 @@ main .tela3 {
     flex: 1;
 }
 
+main .tela3 #buttonStatsOpen {
+    background-color: #091f1f;
+    border: solid 2px #061616;
+    cursor: pointer;
+    position: absolute;
+}
+
+main .tela3 .areaStats {
+    background-color: #091f1f;
+    position: relative;
+    width: 20rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+main .tela3 .areaStats #buttonStatsClose {
+    background-color: #091f1f;
+    border: solid 2px #061616;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+main .tela3 .areaStats h2 {
+    color: #fff;
+    width: 83%;
+    margin-top: .9rem;
+    margin-bottom: .8rem;
+    text-align: center;
+}
+
+main .tela3 .areaStats .statsItem {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+main .tela3 .areaStats span.descricao {
+    font-weight: bold;
+}
+
 footer {
     width: 100%;
     height: 10vh;
