@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.dsNone {
+    display: none;
+}
+
 body {
     background-color: gray;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -67,7 +71,7 @@ main .tela1 .upgrade-container .upgrade-item span.valor {
 }
 
 main .tela1 .upgrade-container .upgrade-item button {
-    flex: 1;
+    flex: .3;
     margin: 0 1rem;
     padding: .4rem .8rem;
     background-color: #00c3ff;
@@ -149,18 +153,56 @@ main .tela3 .areaStats h2 {
     color: #fff;
     width: 83%;
     margin-top: .9rem;
-    margin-bottom: .8rem;
+    margin-bottom: 1.4rem;
     text-align: center;
 }
 
 main .tela3 .areaStats .statsItem {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
+    background-color: #d1f0f0;
+    margin: 1rem;
+    border-radius: .5rem;
 }
 
 main .tela3 .areaStats span.descricao {
+    flex: 1.5;
     font-weight: bold;
+}
+
+main .tela3 .areaStats span.valor {
+    flex: 1;
+    text-align: center;
+    background-color: #b6e2e2;
+    padding: .3rem .2rem;
+    border-radius: .4rem;
+}
+
+main .tela3 .areaStats .upgrade {
+    flex: .5;
+    margin: 0 .5rem;
+    padding: .4rem 0rem;
+    background-color: #00c3ff;
+    border: none;
+    border-radius: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+main .tela3 .areaStats .upgrade:hover {
+    transform: scale(1.05);
+    background-color: #03a5d6;
+}
+
+main .tela3 .areaStats span.nivel {
+    flex: 1;
+    text-align: center;
+    background-color: #b6e2c5;
+    padding: .3rem .1rem;
+    border-radius: .4rem;
 }
 
 footer {
