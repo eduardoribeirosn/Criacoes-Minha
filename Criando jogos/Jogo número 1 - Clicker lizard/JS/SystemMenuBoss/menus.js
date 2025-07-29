@@ -1,5 +1,18 @@
 // Abrir e Fechar o Menu de Upgrades de Stats
 export function menuUpgradeStats() {
+    let areaUpgradeStats = document.getElementById("areaUpgradeStatsId")
+    let buttonUpgradeStats = document.getElementById("buttonUpgradeStatsOpen")
+    if (areaUpgradeStats.classList.contains("dsNone")) {
+        areaUpgradeStats.classList.remove("dsNone")
+        buttonUpgradeStats.classList.add("dsNone")
+    } else {
+        areaUpgradeStats.classList.add("dsNone")
+        buttonUpgradeStats.classList.remove("dsNone")
+    }
+}
+
+// Abrir e Fechar o Menu de Stats
+export function menuStats() {
     let areaStats = document.getElementById("areaStatsId")
     let buttonStats = document.getElementById("buttonStatsOpen")
     if (areaStats.classList.contains("dsNone")) {
