@@ -14,7 +14,7 @@ import { upgradePonts, attUpgradePonts, getValueUpPonts } from "./JS/upgradePont
 import { upgradeAutoClick, autoClick, attUpgradeAutoC, getValueUpAutoClick } from "./JS/upgradeAutoClickGroup.js"
 import { upgradeLeveis, attUpgradeLeveis, getValueUpLeveis } from "./JS/systemLeveisGroup.js"
 
-import { menuUpgradeStats, menuStats} from "./JS/SystemMenuBoss/menus.js"
+import { menuUpgradeStats, menuStats, menuBoss} from "./JS/SystemMenuBoss/menus.js"
 
 document.getElementById("buttonPontos").addEventListener("click", clickButtonPonts)
 document.getElementById("buttonUpPontos").addEventListener("click", upgradePonts)
@@ -25,6 +25,8 @@ document.getElementById("buttonUpgradeStatsOpen").addEventListener("click", menu
 document.getElementById("buttonUpgradeStatsClose").addEventListener("click", menuUpgradeStats)
 document.getElementById("buttonStatsOpen").addEventListener("click", menuStats)
 document.getElementById("buttonStatsClose").addEventListener("click", menuStats)
+document.getElementById("buttonBossOpen").addEventListener("click", menuBoss)
+document.getElementById("buttonBossClose").addEventListener("click", menuBoss)
 
 
 // Botão para adicionar Pontos | Alterar texto de ganhar pontos

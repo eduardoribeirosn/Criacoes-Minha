@@ -23,3 +23,16 @@ export function menuStats() {
         buttonStats.classList.remove("dsNone")
     }
 }
+
+// Abrir e Fechar o Menu de Bosses
+export function menuBoss() {
+    let areaBoss = document.getElementById("areaBossId")
+    let buttonBoss = document.getElementById("buttonBossOpen")
+    if (areaBoss.classList.contains("dsNone")) {
+        areaBoss.classList.remove("dsNone")
+        buttonBoss.classList.add("dsNone")
+    } else {
+        areaBoss.classList.add("dsNone")
+        buttonBoss.classList.remove("dsNone")
+    }
+}
