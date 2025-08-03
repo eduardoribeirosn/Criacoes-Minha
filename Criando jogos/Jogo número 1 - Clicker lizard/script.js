@@ -15,6 +15,8 @@ import { upgradeAutoClick, autoClick, attUpgradeAutoC, getValueUpAutoClick } fro
 import { upgradeLeveis, attUpgradeLeveis, getValueUpLeveis } from "./JS/systemLeveisGroup.js"
 
 import { menuUpgradeStats, menuStats, menuBoss} from "./JS/SystemMenuBoss/menus.js"
+import { fightPersonBossGoblin, fightPersonBossLobo, fightPersonBossUrso } from "./JS/SystemMenuBoss/ScriptsBosses/scriptsBosses.js"
+import { attButtonBosses } from "./JS/SystemMenuBoss/Bosses/bossUnlocked.js"
 
 document.getElementById("buttonPontos").addEventListener("click", clickButtonPonts)
 document.getElementById("buttonUpPontos").addEventListener("click", upgradePonts)
@@ -28,6 +30,9 @@ document.getElementById("buttonStatsClose").addEventListener("click", menuStats)
 document.getElementById("buttonBossOpen").addEventListener("click", menuBoss)
 document.getElementById("buttonBossClose").addEventListener("click", menuBoss)
 
+
+document.getElementById("bossLobo").addEventListener("click", fightPersonBossLobo)
+document.getElementById("bossUrso").addEventListener("click", fightPersonBossUrso)
 
 // Botão para adicionar Pontos | Alterar texto de ganhar pontos
 attButtonPontos()
@@ -45,6 +50,9 @@ attUpgradePonts()
 attUpgradeAutoC()
 // -----
 
+// Valor para atualizar as imagens dos bosses | Alterar Imagem dos bosses para Batalha
+attButtonBosses()
+// -----
 
 
 // Funções para pegar e modificar váriveis deste arquivo...

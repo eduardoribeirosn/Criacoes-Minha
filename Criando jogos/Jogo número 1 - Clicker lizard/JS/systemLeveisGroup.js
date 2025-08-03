@@ -1,5 +1,6 @@
 import { getLevel, setLevel } from "../script.js";
 import { attButtonPontos, getIntPonts, getPonts } from "./clickerButtonPontsGroup.js";
+import { attButtonBosses } from "./SystemMenuBoss/Bosses/bossUnlocked.js";
 
 // Fazer upgrade dos Leveis
 export function upgradeLeveis() {
@@ -8,6 +9,7 @@ export function upgradeLeveis() {
         setLevel(getLevel() + 1)
         attUpgradeLeveis()
         attButtonPontos()
+        attButtonBosses()
     }
 }
 
